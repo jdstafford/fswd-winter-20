@@ -28,4 +28,12 @@ module.exports = {
       ecmaVersion: 6,
   },
   extends: ['eslint:recommended'],
+  overrides: [
+    {
+      files: ["*.test.js"],
+      env: {
+        jest: true
+      }
+    }
+  ]
 };
