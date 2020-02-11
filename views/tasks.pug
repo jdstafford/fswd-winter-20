@@ -1,0 +1,10 @@
+extends ./layout
+
+block bodyContents
+    h1 Tasks!
+    ul
+        each task in tasks
+            li= task.name
+
+    form(method="POST" action="/tasks")
+        input(type="text" name="name")
