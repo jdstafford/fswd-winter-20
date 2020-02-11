@@ -4,7 +4,21 @@ block bodyContents
     h1 Tasks!
     ul
         each task in tasks
-            li= task.name
+            unless task.isCompleted()
+                li
+                    form(method="POST" action="/tasks/" + task.id + "/complete")
+                        = task.name
+                        | &nbsp;
+                        button(title="Complete") Complete!
 
     form(method="POST" action="/tasks")
         input(type="text" name="name")
+
+//- script.
+//-     function completeTask(taskId) {
+//-         fetch(`http://localhost:8000/tasks/${taskId}/complete`, {
+//-             method: 'post',
+//-         }).then(function(response) {
+//-             return response.json();
+//-         });
+//-     }
