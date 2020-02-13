@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
                         completedAt: null
                     }
                 },
-                completedWithinAnHour: function() {
+                completedWithinAnHour: function () {
                     return {
                         where: {
                             completedAt: {
@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
                         }
                     };
                 },
-                completedWithinXHours: function(x) {
+                completedWithinXHours: function (x) {
                     return {
                         where: {
                             completedAt: {
@@ -46,11 +46,11 @@ module.exports = (sequelize, DataTypes) => {
     //   // associations can be defined here
     // };
 
-    Task.prototype.isCompleted = function() {
+    Task.prototype.isCompleted = function () {
         return !!this.completedAt;
     };
 
-    Task.prototype.markCompleted = async function() {
+    Task.prototype.markCompleted = async function () {
         const timeNow = new Date();
 
         return this.update({
