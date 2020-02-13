@@ -1,0 +1,36 @@
+extends ./layout
+
+block bodyContents
+    h1 Please Register
+
+    if message
+        h2= message
+
+    form(
+        action="/register"
+        method="POST"
+    )
+
+        h3 name
+        input(
+            name="name"
+        )
+
+        h3 email
+        input(
+            name="email"
+        )
+
+        h3 password
+        input(
+            name="password"
+            type="password"
+        )
+
+        h3 confirm password
+        input(
+            name="passwordConfirm"
+            type="password"
+        )
+
+        button(title="Register") Register!
