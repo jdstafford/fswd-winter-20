@@ -25,7 +25,7 @@ module.exports = {
             unicodeCodePointEscapes: true,
             globalReturn: true
         },
-        ecmaVersion: 6
+        ecmaVersion: 8
     },
     extends: ["eslint:recommended"],
     overrides: [

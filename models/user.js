@@ -21,14 +21,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     hooks: {
-      afterCreate: (instance, options) => {
+      afterCreate: (/*instance, options*/) => {
         console.log("I sent an email!");
       }
     }
   });
 
 
-  User.associate = function (models) {
+  User.associate = function (/*models*/) {
     // associations can be defined here
   };
 
