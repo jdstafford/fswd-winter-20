@@ -1,7 +1,10 @@
 extends ./layout
 
 block bodyContents
-    h1 Tasks!
+    if user
+        h1 Tasks for #{username}
+    else
+        h1 Tasks
     ul
         each task in tasks
             unless task.isCompleted()

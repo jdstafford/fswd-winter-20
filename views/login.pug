@@ -1,0 +1,14 @@
+extends ./layout
+
+block bodyContents
+    h1 Login!
+    if error
+        p= error
+    form(method="POST" action="/login")
+        label(for="email") Email
+        input(name="email" type="text" value=email)
+        br
+        label(for="password") Password
+        input(name="password" type="password")
+        br
+        button(type="submit") Login

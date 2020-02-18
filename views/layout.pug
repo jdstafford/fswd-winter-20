@@ -1,6 +1,9 @@
 html
     head
-        title Hello #{name}!
+        if user
+            title Hello #{username}!
+        else
+            title Hello, Stranger!
 
     body
         block bodyContents

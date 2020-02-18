@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define('User', {
+  const User = sequelize.define('user', {
     name: {
       type: DataTypes.STRING,
       validate: { notEmpty: true }
@@ -28,8 +28,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
 
-  User.associate = function (/*models*/) {
-    // associations can be defined here
+  User.associate = function (models) {
+    User.hasMany(models.Task);
   };
 
   User.prototype.isValidPassword = function (passwordAttempt) {
