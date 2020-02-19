@@ -1,7 +1,7 @@
 extends ./layout
 
 block bodyContents
-    if user
+    if username
         h1 Tasks for #{username}
     else
         h1 Tasks
@@ -16,12 +16,3 @@ block bodyContents
 
     form(method="POST" action="/tasks")
         input(type="text" name="name")
-
-//- script.
-//-     function completeTask(taskId) {
-//-         fetch(`http://localhost:8000/tasks/${taskId}/complete`, {
-//-             method: 'post',
-//-         }).then(function(response) {
-//-             return response.json();
-//-         });
-//-     }

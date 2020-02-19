@@ -34,6 +34,10 @@ module.exports = {
             env: {
                 jest: true
             }
+        },
+        {
+            files: ["migrations/*.js"],
+            rules: { "no-unused-vars": 0 }
         }
     ]
 };
