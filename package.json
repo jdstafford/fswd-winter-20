@@ -9,7 +9,8 @@
     "test": "npm run lint && npm run jest",
     "dev": "NODE_ENV=development nodemon ./lib/index.js",
     "start": "node ./lib/index.js",
-    "coverage": "opn coverage/lcov-report/index.html"
+    "coverage": "opn coverage/lcov-report/index.html",
+    "heroku-postbuild": "sequelize db:migrate"
   },
   "keywords": [],
   "author": "",
