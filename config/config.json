@@ -8,5 +8,9 @@
         "dialect": "sqlite",
         "storage": "./test.db",
         "operatorsAliases": false
+    },
+    "production": {
+        "dialect": "postgres",
+        "use_environment_variable": "DATABASE_URL"
     }
 }
