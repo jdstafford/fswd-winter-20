@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
 
 
   User.associate = function (models) {
-    User.hasMany(models.Task);
+    User.hasMany(models.task);
   };
 
   User.prototype.isValidPassword = function (passwordAttempt) {
